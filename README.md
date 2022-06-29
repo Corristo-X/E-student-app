@@ -11,3 +11,4 @@ został napisany w programie Visual Studio Code. W projekcie zostały uwzględni
 Przy użyciu tej aplikacji oraz z pomocą prowadzącego, który zna program student może
 wykonać całe sprawozdanie oraz zadania podczas ćwiczeń. Aplikacja E-STUDENT sama
 wylicza odpowiednie parametry oraz rysuje wykresy z wprowadzonych danych.
+W pliku E-student.pdf znajduje się opis aplikacji oraz jej wygląd.
