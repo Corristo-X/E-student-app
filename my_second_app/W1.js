@@ -39,27 +39,56 @@ import { shouldUseActivityState } from 'react-native-screens';
 
     
 
-    const [Tokarka,setTokarka]=useState();
-    const [Material,setMaterial]=useState();
-    const [Narzedzia,setNarzedzia]=useState();
-    const [Kr,setKr]=useState();
-    const [Krsecond,setKrsecond]=useState();
-    const[MocTokarka,setMocTokarka]=useState();
-    const[ap,setap]=useState();
-    const[ośrodek,setośrodek]=useState();
+   /* const[Parametry,setParametry]=useState({
+      nTokarka:'',
+      nMaterial:'',
+      nNarzedzia:'',
+      nKr:'',
+      nKrsecond:'',
+      nMocTokarka:'',
+      nap:'',
+      nośrodek:''
+    })
+*/
+    const [Tokarka,setTokarka]=useState('');
+    const [Material,setMaterial]=useState('');
+    const [Narzedzia,setNarzedzia]=useState('');
+    const [Kr,setKr]=useState('');
+    const [Krsecond,setKrsecond]=useState('');
+    const[MocTokarka,setMocTokarka]=useState('');
+    const[ap,setap]=useState('');
+    const[ośrodek,setośrodek]=useState('');
+
+
+
     const[isLoading,setisLoading]=useState(false);
     const saveTokarka = async()=>{
+
+
+    
+      
+
+
       try{
             await AsyncStorage.setItem("MyTokarka",Tokarka);
             await AsyncStorage.setItem("MyMocTokarka",MocTokarka);
+
+
   
       }catch(err)
       {
         alert(err)
   
       }
-  
     }
+    
+    {
+
+     
+
+    }
+  
+    
     const loadTokarka = async () =>{
       try{
         let Tokarka = await AsyncStorage.getItem("MyTokarka")
@@ -238,10 +267,15 @@ import { shouldUseActivityState } from 'react-native-screens';
         <Text style={styles.bold}>Wprowadz nazwę Tokarki oraz Moc Tokarki</Text>
         <View style={styles.textstyle} >
         <TextInput style={styles.input}
+       
+        maxLength={20}
         placeholder="Nazwa Tokarki"
             onChangeText={(text) => setTokarka(text)}
+         
+          
         />
          <TextInput style={styles.input}
+         maxLength={4}
             placeholder="Ps"
             onChangeText={(text) => setMocTokarka(text)}
         />
@@ -292,8 +326,8 @@ import { shouldUseActivityState } from 'react-native-screens';
         <View style={styles.mniejszaprzerwa}></View>
         <Text style={styles.bold}>Wprowadz nazwę Narzędzia,Kr oraz Kr'</Text>
         <View style={styles.textstyle}>
-        <TextInput style={styles.input}
-        placeholder="Wprowadz nazwe narzedzia"
+        <TextInput style={styles.input2}
+        placeholder="Narzędzie"
         onChangeText={(text) => setNarzedzia(text)}
         />
           <TextInput style={styles.input}
@@ -339,12 +373,18 @@ import { shouldUseActivityState } from 'react-native-screens';
         />
         
         </View>
+        <View style={styles.textstyle}>
+       <Text style={styles.nazwy}>ap : {ap}</Text>
+       <Text style={styles.nazwy}>Ośrodek obróbkowy : {ośrodek}</Text>
+       </View>
+       <View style={styles.mniejszaprzerwa}></View>
        <View style={styles.button}>
        <TouchableHighlight style={styles.viewboxbutton} onPress={()=>saveap()} underlayColor="white">
       <Text style={styles.buttoncolor}>
         zapisz
       </Text>
       </TouchableHighlight>
+      
       <TouchableHighlight style={styles.viewboxbutton} onPress={()=>removeap()} underlayColor="white">
       <Text style={styles.buttoncolor}>
         usuń
@@ -354,10 +394,7 @@ import { shouldUseActivityState } from 'react-native-screens';
    
        </View>
        <View style={styles.mniejszaprzerwa}></View>
-       <View style={styles.textstyle}>
-       <Text style={styles.nazwy}>ap : {ap}</Text>
-       <Text style={styles.nazwy}>Ośrodek obróbkowy : {ośrodek}</Text>
-       </View>
+     
         
        <View style={styles.mniejszaprzerwa}></View>
           <Button style={styles.borderbutton}

@@ -23,6 +23,9 @@ import W2chart from './W2chart';
 import W4 from './W4';
 import W4table from './W4table';
 import W4podsumowanie from './W4podsumowanie';
+import AppNotes from './AppNotes'
+import HomeScreen from './HomeScreen'
+
 
 import {
   PermissionsAndroid,
@@ -60,75 +63,19 @@ import { shouldUseActivityState } from 'react-native-screens';
 
 
 
-/////////////////////////////////////////////////
-  function HomeScreen({ navigation }) {
-
-  return (
-    
-  
-    <View style={styles.container}>
-      <View style={styles.container0}>
-        <Image
-         source={require('./img/logoPK.png')}
-         style={styles.pkimagemain}/>
-      </View>
-   
-      <TouchableHighlight style={styles.viewbox} onPress={()=>navigation.navigate('W1')} underlayColor="white">
-      
-    
-        <Text style={styles.textw}>
-      W1 - TOCZENIE I WYTACZANIE
-
-      </Text>
-          
-      
-      </TouchableHighlight>
-      
-      <TouchableHighlight style={styles.viewbox} onPress={()=>navigation.navigate('W2')} underlayColor="white">
-      <Text style={styles.textw}>
-        W2 - WIERCENIE, ROZWIERCANIE I POGŁĘBIANIE
-      </Text>
-         </TouchableHighlight>
-     
-      
-      
-      
-      <TouchableHighlight style={styles.viewbox} onPress={()=>navigation.navigate('W3')} underlayColor="white">
-     <Text style={styles.textw}>
-      W3 - FREZOWANIE
-
-     </Text>
-
-          </TouchableHighlight>
-      
-      
-      <TouchableHighlight style={styles.viewbox} onPress={()=>navigation.navigate('W4')} underlayColor="white">
-      <Text style={styles.textw}>
-        W4 - OBRÓBKA UZĘBIEŃ I UZWOJEŃ
-      </Text>
-          </TouchableHighlight>
-      
-      
-      
-     
-    
-    </View>
-    
-  );
-};
-
-
-
-
 
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+    <NavigationContainer independent={true}>
+      <Stack.Navigator
+      
+      initialRouteName="Home">
+        
         <Stack.Screen name="E-student" component={HomeScreen} />
+        <Stack.Screen name='AppNotes' component={AppNotes} options={{headerShown: false}}/>
         <Stack.Screen name="chart" component={chart} />
         <Stack.Screen name="W2" component={W2} />
         <Stack.Screen name="W1" component={W1} />
@@ -159,3 +106,4 @@ function App() {
 export default App;
 
 // 5359
+

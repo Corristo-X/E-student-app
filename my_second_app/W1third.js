@@ -332,97 +332,95 @@ const W1third = function W1third({ navigation }) {
       if(isLoading==true){
     return (
         <View>
-          <View style={styles.textstyle} >
-         <Text style={styles.nazwy}>Tokarka : {Tokarka}</Text>
-         <Text style={styles.nazwy}>Ps[kW] : {MocTokarka}</Text>
+          <Text style={styles.naglowek}>Parametry</Text>
+          <View style={styles.lista} >
+         <Text style={styles.nazwy}><Text style={styles.wielkosc}>&#183;</Text><Text>  Tokarka : {Tokarka}</Text></Text>
+         <Text style={styles.nazwy}>&#183;  Ps[kW] : {MocTokarka}</Text>
+         <Text style={styles.nazwy}>&#183;  Materiał obrabiany : {Material}</Text>
+         <Text style={styles.nazwy}>&#183;  Narzędzie : {Narzedzia}</Text>
+        <Text style={styles.nazwy}>&#183;  Kr : {Kr}</Text>
+        <Text style={styles.nazwy}>&#183;  Kr' : {Krsecond}</Text>
+        <Text style={styles.nazwy}>&#183;  ap : {ap}</Text>
+       <Text style={styles.nazwy}>&#183;  Ośrodek obróbkowy : {ośrodek}</Text>
          </View>
-         <View style={styles.mniejszaprzerwa}></View>
-         <View style={styles.textstyle}>
-        <Text 
-          style={styles.nazwy}>Materiał obrabiany : {Material}</Text>
-       </View>
-       <View style={styles.mniejszaprzerwa}></View>
-             <View style={styles.textstyle}>
-        <Text style={styles.nazwy}>Narzędzie : {Narzedzia}</Text>
-        <Text style={styles.nazwy}>Kr : {Kr}</Text>
-        <Text style={styles.nazwy}>Kr' : {Krsecond}</Text>
-        </View>
-        <View style={styles.mniejszaprzerwa}></View>
-          <View style={styles.textstyle}>
-       <Text style={styles.nazwy}>ap : {ap}</Text>
-       <Text style={styles.nazwy}>Ośrodek obróbkowy : {ośrodek}</Text>
-       </View>
+      
        <View style={styles.mniejszaprzerwa}></View>
             <View 
             style={styles.textstyle}>
-                <View style={styles.tabelka}>
-                  <Text>d[mm]</Text>
-            <Text>{dxl1}</Text>
-            <Text>{dxl2}</Text>
-            <Text>{dxl3}</Text>
-            <Text>{dxl4}</Text>
-            <Text>{dxl5}</Text>
-            <Text>{dxl6}</Text>
-            <Text>{dxl7}</Text>
-            <Text>{dxl8}</Text>
+            <View style={styles.tabelka}>
+              <Text style={styles.naglowek2}>d[mm]</Text>
+              <View style={styles.mniejszaprzerwa}></View>
+            <Text style={styles.border}>{dxl1}</Text>
+            <Text style={styles.border}>{dxl2}</Text>
+            <Text style={styles.border}>{dxl3}</Text>
+            <Text style={styles.border}>{dxl4}</Text>
+            <Text style={styles.border}>{dxl5}</Text>
+            <Text style={styles.border}>{dxl6}</Text>
+            <Text style={styles.border}>{dxl7}</Text>
+            <Text style={styles.border}>{dxl8}</Text>
             </View>
             <View style={styles.tabelka}>
-            <Text>n[obr/min]</Text>
-            <Text>{n1}</Text>
-            <Text>{n2}</Text>
-            <Text>{n3}</Text>
-            <Text>{n4}</Text>
-            <Text>{n5}</Text>
-            <Text>{n6}</Text>
-            <Text>{n7}</Text>
-            <Text>{n8}</Text>
+            <Text style={styles.naglowek2}>n[obr/min]</Text>
+            <View style={styles.mniejszaprzerwa}></View>
+            <Text style={styles.border}>{n1}</Text>
+            <Text style={styles.border}>{n2}</Text>
+            <Text style={styles.border}>{n3}</Text>
+            <Text style={styles.border}>{n4}</Text>
+            <Text style={styles.border}>{n5}</Text>
+            <Text style={styles.border}>{n6}</Text>
+            <Text style={styles.border}>{n7}</Text>
+            <Text style={styles.border}>{n8}</Text>
             </View>
             <View style={styles.tabelka}>
-                <Text>vc[m/min]</Text>
-                <Text>{(pi*dxl1*n1/1000).toFixed(2)}</Text>
-                <Text>{(pi*dxl2*n2/1000).toFixed(2)}</Text>
-                <Text>{(pi*dxl3*n3/1000).toFixed(2)}</Text>
-                <Text>{(pi*dxl4*n4/1000).toFixed(2)}</Text>
-                <Text>{(pi*dxl5*n5/1000).toFixed(2)}</Text>
-                <Text>{(pi*dxl6*n6/1000).toFixed(2)}</Text>
-                <Text>{(pi*dxl7*n7/1000).toFixed(2)}</Text>
-                <Text>{(pi*dxl8*n8/1000).toFixed(2)}</Text>
+                <Text style={styles.naglowek2}>vc[m/min]</Text>
+                <View style={styles.mniejszaprzerwa}></View>
+                <Text style={styles.border}>{(pi*dxl1*n1/1000).toFixed(2)}</Text>
+                <Text style={styles.border}>{(pi*dxl2*n2/1000).toFixed(2)}</Text>
+                <Text style={styles.border}>{(pi*dxl3*n3/1000).toFixed(2)}</Text>
+                <Text style={styles.border}>{(pi*dxl4*n4/1000).toFixed(2)}</Text>
+                <Text style={styles.border}>{(pi*dxl5*n5/1000).toFixed(2)}</Text>
+                <Text style={styles.border}>{(pi*dxl6*n6/1000).toFixed(2)}</Text>
+                <Text style={styles.border}>{(pi*dxl7*n7/1000).toFixed(2)}</Text>
+                <Text style={styles.border}>{(pi*dxl8*n8/1000).toFixed(2)}</Text>
             </View>
             <View style={styles.tabelka}>
-              <Text>f[mm/obr]</Text>
-            <Text>{vc1}</Text>
-            <Text>{vc2}</Text>
-            <Text>{vc3}</Text>
-            <Text>{vc4}</Text>
-            <Text>{vc5}</Text>
-            <Text>{vc6}</Text>
-            <Text>{vc7}</Text>
-            <Text>{vc8}</Text>
+              <Text style={styles.naglowek2}>f[mm/obr]</Text>
+              <View style={styles.mniejszaprzerwa}></View>
+            <Text style={styles.border}>{vc1}</Text>
+            <Text style={styles.border}>{vc2}</Text>
+            <Text style={styles.border}>{vc3}</Text>
+            <Text style={styles.border}>{vc4}</Text>
+            <Text style={styles.border}>{vc5}</Text>
+            <Text style={styles.border}>{vc6}</Text>
+            <Text style={styles.border}>{vc7}</Text>
+            <Text style={styles.border}>{vc8}</Text>
             </View>
             <View style={styles.tabelka}>
-              <Text>re[mm]</Text>
-            <Text>{re1}</Text>
-            <Text>{re2}</Text>
-            <Text>{re3}</Text>
-            <Text>{re4}</Text>
-            <Text>{re5}</Text>
-            <Text>{re6}</Text>
-            <Text>{re7}</Text>
-            <Text>{re8}</Text> 
+              <Text style={styles.naglowek2}>re[mm]</Text>
+              <View style={styles.mniejszaprzerwa}></View>
+            <Text style={styles.border}>{re1}</Text>
+            <Text style={styles.border}>{re2}</Text>
+            <Text style={styles.border}>{re3}</Text>
+            <Text style={styles.border}>{re4}</Text>
+            <Text style={styles.border}>{re5}</Text>
+            <Text style={styles.border}>{re6}</Text>
+            <Text style={styles.border}>{re7}</Text>
+            <Text style={styles.border}>{re8}</Text> 
             </View>
             <View style={styles.tabelka}>
-              <Text>Ra[um]</Text>
-            <Text>{ra1}</Text>
-            <Text>{ra2}</Text>
-            <Text>{ra3}</Text>
-            <Text>{ra4}</Text>
-            <Text>{ra5}</Text>
-            <Text>{ra6}</Text>
-            <Text>{ra7}</Text>
-            <Text>{ra8}</Text> 
+              <Text style={styles.naglowek2}>Ra[um]</Text>
+              <View style={styles.mniejszaprzerwa}></View>
+            <Text style={styles.border}>{ra1}</Text>
+            <Text style={styles.border}>{ra2}</Text>
+            <Text style={styles.border}>{ra3}</Text>
+            <Text style={styles.border}>{ra4}</Text>
+            <Text style={styles.border}>{ra5}</Text>
+            <Text style={styles.border}>{ra6}</Text>
+            <Text style={styles.border}>{ra7}</Text>
+            <Text style={styles.border}>{ra8}</Text> 
             </View> 
             </View>
-        
+          <View style={styles.przerwa}></View>
         
             <Button style={styles.borderbutton}
           title="Edycja Tabeli"

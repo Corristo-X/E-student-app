@@ -91,6 +91,7 @@ const W1second = function W1second({ navigation }) {
 
  
   const savedane = async()=>{
+    setisLoading(false)
     try{
           
           await AsyncStorage.setItem("Mydxl1",dxl1);
@@ -145,6 +146,7 @@ const W1second = function W1second({ navigation }) {
 
     }
       loaddane();
+      setisLoading(true)
   }
   const loaddane = async () =>{
     try{

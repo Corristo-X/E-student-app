@@ -34,6 +34,38 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { shouldUseActivityState } from 'react-native-screens';
 const styles = StyleSheet.create({
+  wielkosc:{
+  
+    
+  },
+  naglowek2:{
+    color:"#660e15",
+    fontWeight:"bold"
+  },
+  naglowek:{
+     fontSize:20,
+     marginLeft:5,
+     fontWeight:"bold",
+     fontStyle:"italic",
+     color:"#d10d1d"
+
+  },
+  lista:{
+    marginLeft:10,
+    marginTop:5,
+
+  },
+  border:{
+    //borderBottomWidth:2,
+    borderWidth:1,
+    paddingLeft:3,
+    borderRadius:2,
+    borderColor:"#121861"
+    
+   
+
+
+  },
   buttoncolor:{
     
     color: '#142d8b',
@@ -120,7 +152,10 @@ const styles = StyleSheet.create({
       
     },
     nazwy:{fontSize:15,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        flexDirection:'row',
+        justifyContent:'space-around',
+        
     },
     input:{
       height:40,
@@ -129,6 +164,13 @@ const styles = StyleSheet.create({
       padding:10,
       
                            
+    },
+    input2:{
+      height:40,
+      margin:12,
+      borderWidth:1,
+      padding:10,
+      marginRight:60
     },
     W1:{
       width:'100%',

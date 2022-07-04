@@ -45,7 +45,7 @@ const W2table2 = function W2table2({ navigation }) {
  
   const [dxl1,setdxl1]=useState();
   const [dxl2,setdxl2]=useState();
- const [dxl3,setdxl3]=useState();
+  const [dxl3,setdxl3]=useState();
   const [dxl4,setdxl4]=useState();
   const [dxl5,setdxl5]=useState();
   const [dxl6,setdxl6]=useState();

@@ -53,193 +53,181 @@ import { State } from 'react-native-gesture-handler';
     
       
 
-    
+    const[state,setState]=useState({[0]:0,[1]:0,[2]:0,[3]:0,[4]:0,[5]:0,[6]:0,[7]:0,
+    [8]:0,[9]:0,[10]:0,[11]:0,[12]:0,[13]:0,[14]:0,[15]:0,
+    [16]:0,
+    [17]:0,
+    [18]:0,
+    [19]:0,
+    [20]:0
+    })
   
-    const[vc1,setvc1]=useState();
-    const[vc2,setvc2]=useState();
-    const[vc3,setvc3]=useState();
-    const[vc4,setvc4]=useState();
-    const[vc5,setvc5]=useState();
-
     
-    const[re1,setre1]=useState();
-    const[re2,setre2]=useState();
-    const[re3,setre3]=useState();
-    const[re4,setre4]=useState();
-    const[re5,setre5]=useState();
-    const[re6,setre6]=useState();
-    const[re7,setre7]=useState();
-    const[re8,setre8]=useState();
-  
-    const[ra1,setra1]=useState();
-    const[ra2,setra2]=useState();
-    const[ra3,setra3]=useState();
-    const[ra4,setra4]=useState();
-    const[ra5,setra5]=useState();
-    const[ra6,setra6]=useState();
-    const[ra7,setra7]=useState();
-    const[ra8,setra8]=useState();
-
     
-    var pi = 3.14;
    const[isLoading,setisLoading]=useState(false);
 
 
-    const getData = async () => {
-      
-     
-      try {
-        
-        
-        jsonValue = await AsyncStorage.getItem('Myra6')
-        return jsonValue != null ? JSON.parse(jsonValue) : null;
-      } catch(e) {
-        // error reading value
-      }
-      
-  }
+  
  
     const loaddane = async () =>{
       
       
         try{
           
-         
+         setisLoading(false);
           
           let zmienne = {};
     
     
-          zmienne.vc1 = await AsyncStorage.getItem("Myvc1")
-          zmienne.vc2 = await AsyncStorage.getItem("Myvc2")
-          zmienne.vc3 = await AsyncStorage.getItem("Myvc3")
-          zmienne.vc4 = await AsyncStorage.getItem("Myvc4")
-          zmienne.vc5 = await AsyncStorage.getItem("Myvc5")
+          zmienne[0] = await AsyncStorage.getItem("Myvc1")
+          zmienne[1] = await AsyncStorage.getItem("Myvc2")
+          zmienne[2] = await AsyncStorage.getItem("Myvc3")
+          zmienne[3] = await AsyncStorage.getItem("Myvc4")
+          zmienne[4] = await AsyncStorage.getItem("Myvc5")
  
     
-          zmienne.re1 = await AsyncStorage.getItem("Myre1")
-          zmienne.re2 = await AsyncStorage.getItem("Myre2")
-          zmienne.re3 = await AsyncStorage.getItem("Myre3")
-          zmienne.re4 = await AsyncStorage.getItem("Myre4")
-          zmienne.re5 = await AsyncStorage.getItem("Myre5")
-          zmienne.re6 = await AsyncStorage.getItem("Myre6")
-          zmienne.re7 = await AsyncStorage.getItem("Myre7")
-          zmienne.re8 = await AsyncStorage.getItem("Myre8")
+          zmienne[5] = await AsyncStorage.getItem("Myre1")
+          zmienne[6] = await AsyncStorage.getItem("Myre2")
+          zmienne[7] = await AsyncStorage.getItem("Myre3")
+          zmienne[8] = await AsyncStorage.getItem("Myre4")
+          zmienne[9] = await AsyncStorage.getItem("Myre5")
+          zmienne[10] = await AsyncStorage.getItem("Myre6")
+          zmienne[11] = await AsyncStorage.getItem("Myre7")
+          zmienne[12] = await AsyncStorage.getItem("Myre8")
 
        
     
-          zmienne.ra1 = await AsyncStorage.getItem("Myra1")
-          zmienne.ra2 = await AsyncStorage.getItem("Myra2")
-          zmienne.ra3 = await AsyncStorage.getItem("Myra3")
-          zmienne.ra4 = await AsyncStorage.getItem("Myra4")
-          zmienne.ra5 = await AsyncStorage.getItem("Myra5")
+          zmienne[13] = await AsyncStorage.getItem("Myra1")
+          zmienne[14] = await AsyncStorage.getItem("Myra2")
+          zmienne[15] = await AsyncStorage.getItem("Myra3")
+          zmienne[16] = await AsyncStorage.getItem("Myra4")
+          zmienne[17] = await AsyncStorage.getItem("Myra5")
 
 
-          zmienne.ra6 = await AsyncStorage.getItem("Myra6")
-          zmienne.ra7 = await AsyncStorage.getItem("Myra7")
-          zmienne.ra8 = await AsyncStorage.getItem("Myra8")
+          zmienne[18] = await AsyncStorage.getItem("Myra6")
+          zmienne[19] = await AsyncStorage.getItem("Myra7")
+          zmienne[20] = await AsyncStorage.getItem("Myra8")
 
           
 
-       
-    
+         
+         
      
             ////////////////////
         
                 //////////////////////////
-    
-                if(zmienne.vc1 !==null){
-                  setvc1(JSON.parse(zmienne.vc1))
-                 
-                }
-                if(zmienne.vc2 !==null){
-                    setvc2(zmienne.vc2)
-                   
-                }
-                if(zmienne.vc3 !==null){
-                  setvc3(zmienne.vc3)
-                 
-                 }
-                  if(zmienne.vc4 !==null){
-                setvc4(zmienne.vc4)
-               
-                }
-                  if(zmienne.vc5 !==null){
-                setvc5(zmienne.vc5)
+               let stan = 'falsz';
                 
+                for(let i=0;i<=20;i++)
+                {
+                //  alert("dziala")
+                if(zmienne[i] !==null){
+                stan='prawda';
+                //
                 }
-            
-    
-                  /////////////////////////////
-    
-                  if(zmienne.re1 !==null){
-                    setre1(zmienne.re1)
-                  }
-                  if(zmienne.re2 !==null){
-                      setre2(zmienne.re2)
-                  }
-                  if(zmienne.re3 !==null){
-                    setre3(zmienne.re3)
-                   }
-                    if(zmienne.re4 !==null){
-                  setre4(zmienne.re4)
-                  }
-                    if(zmienne.re5 !==null){
-                  setre5(zmienne.re5)
-                  }
-                  if(zmienne.re6 !==null){
-                   setre6(zmienne.re6)
-                  
-                  }
-                  if(zmienne.re7 !==null){
-                    setre7(zmienne.re7)
-                    
-                  }
-                    if(zmienne.re8 !==null){
-                    setre8(zmienne.re8)
-                   
+                 // setState(state.vc1=zmienne.vc1)
+                }
+                if(stan=='prawda')
+                {
+               
+                      setState(previousState =>{
+                        return {...previousState,
+                          [0]:zmienne[0],
+                          
+                          [1]:zmienne[1],
+                          
+                          [2]:zmienne[2],
+                          [3]:zmienne[3],
+                          [4]:zmienne[4],
+                          [5]:zmienne[5],
+                          [6]:zmienne[6],
+                          [7]:zmienne[7],
+                          [8]:zmienne[8],
+                          [9]:zmienne[9],
+                          
+                          [10]:zmienne[10],
+                          
+                          [11]:zmienne[11],
+                          [12]:zmienne[12],
+                          
+                          [13]:zmienne[13],
+                          [14]:zmienne[14],
+                          
+                          [15]:zmienne[15],
+
+                           
+                          [16]:zmienne[16],
+                          [17]:zmienne[17],//nie moze byc 4 ?
+                          [18]:zmienne[18],//nie moze byc 4 ?
+                          [19]:zmienne[19],
+                          [20]:zmienne[20]
+                        }
+                      })
+                      /*
+                      setState(previousState=>{
+                        return{...previousState,
+                          [17]:zmienne[17],
+                          [18]:zmienne[18],
+                          
+                          [19]:zmienne[19],
+                           
+                          [20]:zmienne[20]
+                        
+
+                        }
+
+                      })
+                      */
+                          /*
+                          [17]:4,
+                          
+                          [18]:4,
+                         
+                          [19]:4,
+                          
+                          [20]:4
+                           
+                          /*
+                          vc2:zmienne.vc2,
+                          vc3:zmienne.vc3,
+                          vc4:zmienne.vc4,
+                          vc5:zmienne.vc5,
+
+                          re1:zmienne.re1,
+                          re2:zmienne.re2,
+                          re3:zmienne.re3,
+                          re4:zmienne.re4,
+                          re5:zmienne.re5,
+                          re6:zmienne.re6,
+                          re7:zmienne.re7,
+                          re8:zmienne.re8,
+                          
+                          ra1:zmienne.ra1,
+                          ra2:zmienne.ra2,
+                          ra3:zmienne.ra3,
+                          ra4:zmienne.ra4,
+                          ra5:zmienne.ra5,
+                          ra6:zmienne.ra6,
+                          ra7:zmienne.ra7,
+                          ra8:zmienne.ra8,
+                              */
+                     
+                      setisLoading(true)
+                    }
+                    else
+                    {
+
+                    alert("cos nie dziala")
                     }
 
+             
                     
-                    ////////////////////////
-    
-                    if(zmienne.ra1 !==null){
-                      
-                      setra1(JSON.parse(zmienne.ra1))
-                     
-                    }
-                    if(zmienne.ra2 !==null){
-                        setra2(zmienne.ra2)
-                       
-                    }
-                    if(zmienne.ra3 !==null){
-                      setra3(zmienne.ra3)
-                     
-                     }
-                      if(zmienne.ra4 !==null){
-                    setra4(zmienne.ra4)
                    
-                    }
-                      if(zmienne.ra5 !==null){
-                    setra5(zmienne.ra5)
-                   
-                    }
-                    if(zmienne.ra6 !==null){
-                     setra6(zmienne.ra6)
-                    
-                    }
-                    if(zmienne.ra7 !==null){
-                      setra7(zmienne.ra7)
-                      
-                    }
-                      if(zmienne.ra8 !==null){
-                      setra8(zmienne.ra8)
-                      
-                      }
 
                    
-
-                     
-       
+              
+               
+               
         }
         catch(err){
           alert(err)
@@ -247,29 +235,43 @@ import { State } from 'react-native-gesture-handler';
     
     
         }
-        setisLoading(true)
+      
       }
       useEffect(()=>{
        
         
-        getData();
         
-     loaddane();
-     setisLoading(false);
+        
+    // loaddane();
+     setisLoading(true);
      
       },[])
 
 
     const chartConfig = {
-        backgroundGradientFrom: "#58508d",
-        backgroundGradientFromOpacity: 0,
-        backgroundGradientTo: "#003f5c",
-        backgroundGradientToOpacity: 0.5,
-        color: (opacity = 1) => `rgba(244, 0, 146, ${opacity})`,
-        strokeWidth: 2, // optional, default 3
-        barPercentage: 0.5,
+      
+        backgroundGradientFrom: "#073004",
+       backgroundGradientFromOpacity: 0.4,
+       backgroundGradientTo: "#b6ebb2",
+     backgroundGradientToOpacity: 5,
+        color: (opacity = 123) => '#0b8701',
+        labelColor: (opacity = 1) => '#000000',
+        strokeWidth: 3, // optional, default 3
+        barPercentage: 0.1,
+        fillShadowGradient:"#041354",
+        fillShadowGradientOpacity:0.8,
+      //  fillShadowGradientTo:"#000000",
+        useShadowColorFromDataset:true,
         
-        useShadowColorFromDataset: false // optional
+        useShadowColorFromDataset: false, // optional
+        style: {
+          borderRadius: 16
+        },
+        propsForDots: {
+          r: "3",
+          strokeWidth: "2",
+          stroke: "#053602"
+        }
       };
       //https://stackoverflow.com/questions/60485319/how-to-resolve-error-while-updating-property-d-of-a-view-managed-byrnsvgpath
 
@@ -279,16 +281,18 @@ import { State } from 'react-native-gesture-handler';
   
   
       
-
+     
+      
   
    if(isLoading==true){
 
     const data = {
-      labels: [JSON.parse(vc1), JSON.parse(vc2), JSON.parse(vc3),JSON.parse(vc4),JSON.parse(vc5)],
-     
+      labels: [(state[0]), (state[1]), (state[2]),(state[3]),(state[4])],
+   
       datasets: [
         {
-          data: [JSON.parse(ra1),JSON.parse(ra2),JSON.parse(ra3),JSON.parse(ra4),JSON.parse(ra5)],
+          data: [(state[13]),(state[14]),(state[15]),(state[16]),(state[17])],
+        
           color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`, // optional
           strokeWidth: 2 // optional
         }
@@ -296,11 +300,11 @@ import { State } from 'react-native-gesture-handler';
       legend: ["Ra w funkcji posuwu f"] // optional
     };
     const data1 = {
-     labels: [JSON.parse(re8), JSON.parse(re7), JSON.parse(re6)],
-     
+     labels: [(state[12]), (state[11]), (state[10])],
+    
       datasets: [
         {
-          data: [JSON.parse(ra8),JSON.parse(ra7),JSON.parse(ra6)],
+          data: [(state[20]),(state[19]),(state[18])],
           
           color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`, // optional
           strokeWidth: 2 // optional
@@ -313,12 +317,15 @@ import { State } from 'react-native-gesture-handler';
 
 
     return (
-      
+    
     
       <ScrollView>
           
      <View>
-      
+      <Button
+        title="Wczytaj dane do wykresu"
+        onPress={loaddane}
+      ></Button>
     
      <LineChart
 
