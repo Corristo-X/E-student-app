@@ -453,7 +453,7 @@ const W2podsumowanie = function W2podsumowanie({ navigation }) {
           <View style={styles.mniejszaprzerwa}></View>
           <View ><Text style={styles.bold}>Tabela 2</Text></View>
           <View style={styles.mniejszaprzerwa}></View>
-          <View style={stykes.mniejszaprzerwa}> Test GIT</View>
+          
           <View 
             style={styles.textstyle}>
                
