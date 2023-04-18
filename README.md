@@ -1,14 +1,4 @@
 # E-student-app
 # React-Native
 
-Aplikacja E-STUDENT została stworzona dla studentów z myślą o zastąpieniu
-papierowych skryptów podczas wykonywania ćwiczeń z obróbki skrawaniem. Cały program
-został napisany w programie Visual Studio Code. W projekcie zostały uwzględnione 4 ćwiczenia:
-• W1 – Toczenie i Wytaczanie
-• W2 – Wiercenie, rozwiercanie i pogłębianie.
-• W3 – Frezowanie
-• W4 – Obróbka skrawaniem
-Przy użyciu tej aplikacji oraz z pomocą prowadzącego, który zna program student może
-wykonać całe sprawozdanie oraz zadania podczas ćwiczeń. Aplikacja E-STUDENT sama
-wylicza odpowiednie parametry oraz rysuje wykresy z wprowadzonych danych.
-W pliku E-student.pdf znajduje się opis aplikacji oraz jej wygląd.
+The E-STUDENT application was created for students with the aim of replacing paper scripts during machining exercises. The entire program was written in Visual Studio Code. The project includes 4 exercises: • W1 – Turning and Boring • W2 – Drilling, Reaming, and Countersinking • W3 – Milling • W4 – Machining Using this application and with the help of the instructor who knows the program, the student can complete the entire report and tasks during the exercises. The E-STUDENT application itself calculates the appropriate parameters and draws graphs from the entered data. The E-student.pdf file contains a description of the application and its appearance.
